@@ -1,0 +1,24 @@
+
+body{background-color: #c3a; transition: all 300ms;}
+#wrap{transition: all 500ms;}
+/*mob*/
+@media screen and (max-width:640px) {body{background-color: #03a;}
+#wrap{width:100%; height: 500px; background-color: #cca;}}
+/*tab*/
+@media screen and (min-width:641px) and (max-width: 1024px) 
+                  { body{background-color: #fca;}
+#wrap{width:90%; height: 30vw;
+      /*가로화면의 % 기준으로 처리 가로화면전체의 30% 만큼의 크기를 높이값으로 설정*/
+      /* ex : 디자인 작업 시: 가로 650px 사이즈에서 높이 100px 만큼 작업
+              공식:내가 사용할 크기에서 /기준 (브라우저값) *100vw
+                            100         / 650 *100vw => 15.384615vw*/
+       margin: 0 auto; background-color: #c9a;}
+}
+/*pc*/
+@media screen and (min-width:1025px), print{
+  {width: 960px; margin: 0 auto; background-color: #fff; padding-top: 1.3rem;}
+}
+/*pcful*/
+@media screen and (min-width:1367px) {
+  #wrap{width: 100%; height: 50vw; background-color: #fff;}
+}
